@@ -1,0 +1,26 @@
+<form class="lista" [formGroup]="newProductForm" (ngSubmit)="onSubmit()">
+  <div class="listat">
+  <label class="lista-opcion" for="name">name<input class="elegir" type="text" formControlName="name"></label>
+  <div class="aviso" *ngIf="newProductForm.get('name')?.hasError('required') && (newProductForm.get('name')?.dirty || submitted)">Este campo es requerido</div>
+  <div class="aviso" *ngIf="newProductForm.get('name')?.hasError('minlength') && (newProductForm.get('name')?.dirty || submitted)">Name tiene que tener mas de 3 caracteres</div>
+  </div>
+  <div class="listat">
+  <label class="lista-opcion" for="price">price<input class="elegir" type="text" formControlName="price"></label>
+  <div class="aviso" *ngIf="newProductForm.get('surname')?.hasError('required') && (newProductForm.get('surname')?.dirty || submitted)">Este campo es requerido</div>
+  <div class="aviso" *ngIf="newProductForm.get('surname')?.hasError('minlength') && (newProductForm.get('surname')?.dirty || submitted)">Surname tiene que tener mas de 3 caracteres</div>
+  </div>
+  <div class="listat">
+  <label class="lista-opcion" for="url">url<input class="elegir" type="text" formControlName="url"></label>
+  <div class="aviso" *ngIf="newProductForm.get('email')?.hasError('required') && (newProductForm.get('email')?.dirty || submitted)">Este campo es requerido</div>
+  <div class="aviso" *ngIf="newProductForm.get('email')?.hasError('pattern') && (newProductForm.get('email')?.dirty || submitted)">Email tiene que tener un formato valido</div>
+  </div>
+  <div class="listat">
+  <label class="lista-opcion" for="description">description<input  class="elegir"type="text" formControlName="description"></label>
+  <div class="aviso" *ngIf="newProductForm.get('description')?.hasError('required') && (newProductForm.get('description')?.dirty || submitted)">Este campo es requerido</div>
+  <div class="aviso" *ngIf="newProductForm.get('description')?.hasError('pattern') && (newProductForm.get('description')?.dirty || submitted)">description tiene que tener un formato valido</div>
+  </div>
+  <div class="cajaboton">
+  <button class="boton">Añadir</button>
+  </div>
+</form>
+

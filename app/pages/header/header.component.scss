@@ -1,0 +1,24 @@
+.Header-1{
+  height: 100px;
+  background-color: gray;
+}
+
+.Header-2{
+  height: 100px;
+  background-color: orange;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.Link{
+  border: 1px solid red;
+  width: 75px;
+  height: 50px;
+  /* text-align: center; */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+
+}
